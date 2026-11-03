@@ -267,6 +267,7 @@ void Game::update(float dt)
         if (pair.top.x + pair.top.width < 0.0f)
         {
             spawnPair(pair, config::PILLAR_RESPAWN_X);
+            if (m_cheatsActive == true) { m_score++*2;}
             ++m_score;
         }
     }
